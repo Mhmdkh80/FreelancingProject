@@ -1,9 +1,15 @@
+import { useMutation } from "@tanstack/react-query";
 import { useState } from "react";
 import OTPInput from "react-otp-input";
+import { checkOtp } from "../../services/authService";
 
 function CheckOTPForm() {
-  
   const [otp, setOtp] = useState("");
+
+  const { isPending, error, data, mutateAsync } = useMutation({
+    mutationFn: checkOtp,
+  });
+
   return (
     <div>
       <form className="container space-y-10">
