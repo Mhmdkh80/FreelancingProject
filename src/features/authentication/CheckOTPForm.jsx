@@ -10,9 +10,16 @@ function CheckOTPForm() {
     mutationFn: checkOtp,
   });
 
+  const checkOtpHandler = async(e) => {
+    e.preventDefault();
+    try {
+   const data=await   mutateAsync({ phoneNumber: "ddd", otp: "3333" });
+    } catch (error) {}
+  };
+
   return (
     <div>
-      <form className="container space-y-10">
+      <form className="container space-y-10" onSubmit={checkOtpHandler}>
         <p className="font-bold text-secondary-800">کد تایید را وارد کنید</p>
 
         <OTPInput
