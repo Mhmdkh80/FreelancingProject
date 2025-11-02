@@ -10,10 +10,10 @@ function CheckOTPForm() {
     mutationFn: checkOtp,
   });
 
-  const checkOtpHandler = async(e) => {
+  const checkOtpHandler = async (e) => {
     e.preventDefault();
     try {
-   const data=await   mutateAsync({ phoneNumber: "ddd", otp: "3333" });
+      const data = await mutateAsync({ phoneNumber: "ddd", otp: "3333" });
     } catch (error) {}
   };
 
