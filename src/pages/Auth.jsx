@@ -1,4 +1,4 @@
-import SendOtpForm from "../features/authentication/SendOTPForm";
+import SendOtpForm from "../features/authentication/SendOtpForm";
 
 function Auth() {
   return (
